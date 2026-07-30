@@ -1,0 +1,10 @@
+{
+  "name": "Eburon Studio",
+  "description": "An open-source AI voice studio application for speech generation and audio editing.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

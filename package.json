@@ -1,0 +1,39 @@
+{
+  "name": "voicebox",
+  "version": "0.5.0",
+  "private": true,
+  "workspaces": [
+    "app",
+    "tauri",
+    "web",
+    "landing"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@voicebox/web",
+    "dev:web": "npm run dev --workspace=@voicebox/web",
+    "dev:landing": "npm run dev --workspace=@voicebox/landing",
+    "build": "npm run build --workspace=@voicebox/web",
+    "build:web": "npm run build --workspace=@voicebox/web",
+    "lint": "biome lint .",
+    "typecheck": "tsc -p app/tsconfig.json --noEmit && cd web && npx tsc --noEmit",
+    "lint:fix": "biome lint --write .",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "check": "biome check .",
+    "check:fix": "biome check --write .",
+    "ci": "npm run typecheck && npm run build:web"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.12",
+    "@types/node": "^20.0.0",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "loaders.css": "^0.1.2",
+    "react-loaders": "^3.0.1"
+  }
+}
